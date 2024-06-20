@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
 
-  allure-testops:
+  testops:
     restart: always
     image: ${ALLURE_REGISTRY}/${ALLURE_SLUG}/allure-testops:${ALLURE_VERSION}
     container_name: allure-testops
