@@ -7,7 +7,7 @@
 # Update this to install different release – check the release notes
 # Release notes: https://docs.qameta.io/allure-testops/release-notes/
 
-ALLURE_VERSION=5.3.2
+ALLURE_VERSION=5.3.3
 
 ########################################################################################
 # ALLURE_ADMIN
