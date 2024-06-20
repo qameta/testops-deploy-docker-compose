@@ -5,7 +5,7 @@ services:
   testops:
     restart: always
     image: ${ALLURE_REGISTRY}/${ALLURE_SLUG}/testops:${ALLURE_VERSION}
-    container_name: allure-testops
+    container_name: testops
     networks:
       - testops-net
     ports:
