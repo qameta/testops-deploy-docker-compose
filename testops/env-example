@@ -1,6 +1,6 @@
 ########################################################################################
 # This configuration MUST NOT BE USED FOR THE PRODUCTION deployment
-# This configuration CAN BE USED FOR DEMO OR POC PURPOSESES 
+# This configuration CAN BE USED FOR DEMO OR POC PURPOSE 
 # Instances deployed using this config as production system WON'T BE SUPPORTED
 ########################################################################################
 
