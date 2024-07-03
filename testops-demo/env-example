@@ -100,9 +100,10 @@ ALLURE_REDIS_PASS=Y5ZBqrcb68WKA9ZZ
 ALLURE_REDIS_DB=0
 
 ########################################################################################
-# Integration with SMTP server is required for inviting new local users to Allure TestOps,
+# Integration with SMTP server is required for inviting new local users to TestOps
+# and inviting of the very first administrator of the system being deployed
 # and for the password reset for local users.
-# Local use is an Allure TestOps user that is being authenticated by Allure TestOps withouit any external IAM systems.
+# Local user is an user that is being authenticated by TestOps without any external IAM systems.
 ########################################################################################
 ALLURE_MAIL_HOST=smtp.gmail.com
 ALLURE_MAIL_PORT=465
