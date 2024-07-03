@@ -11,9 +11,10 @@ ALLURE_VERSION=5.3.3
 
 ########################################################################################
 # FIRST_ADMIN_EMAIL
-# The email address configured below (FIRST_ADMIN_EMAIL) will be used by the system to send the invitation 
+# The email address configured below (FIRST_ADMIN_EMAIL) will be used by the system to send the invitation.
 # to the very first administrator of the instance being deployed.
-# For the operation to be completed successfully 
+# For the operation to be completed successfully all parameters with ALLURE_MAIL_ prefix must be configured for
+# the usage of SMTP server which will send the invitation.
 ########################################################################################
 FIRST_ADMIN_EMAIL=testops-first-admin@company.test
 
@@ -29,7 +30,7 @@ ALLURE_HOST=allure.io
 # ALLURE_INSTANCE_PORT defines the port of testops that is exposed to the external world
 ALLURE_INSTANCE_PORT=80
 # ALLURE_CONTAINER_PORT defines the port of testops which is used to access the appliation inside its container
-# Generlly, you do not need to change it
+# Generally, you do not need to change it
 ALLURE_CONTAINER_PORT=8080
 
 ########################################################################################
@@ -110,7 +111,6 @@ ALLURE_REDIS_DB=0
 # ROLE_GUEST is recommended for better licence consumption control
 ########################################################################################
 ALLURE_REGISTRATION_DEFAULT_ROLE=ROLE_GUEST
-
 
 ########################################################################################
 # Integration with SMTP server is required for inviting new local users to Allure TestOps,
