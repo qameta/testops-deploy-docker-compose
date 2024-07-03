@@ -17,7 +17,7 @@ RELEASE_TO_DEPLOY=5.3.3
 ########################################################################################
 
 IMAGE_REGISTRY=<correct registry here>
-ALLURE_SLUG=<correct slug accordingly to the docs>
+IMAGES_REPO=<correct slug accordingly to the docs>
 
 
 
