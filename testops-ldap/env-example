@@ -1,56 +1,59 @@
 ########################################################################################
 # This configuration MUST NOT BE USED FOR THE PRODUCTION deployment
-# This configuration CAN BE USED FOR DEMO OR POC PURPOSESES 
+# This configuration CAN BE USED FOR DEMO OR POC PURPOSE 
 # Instances deployed using this config as production system WON'T BE SUPPORTED
 ########################################################################################
 
+########################################################################################
 # Update this to install different release – check the release notes
 # Release notes: https://docs.qameta.io/allure-testops/release-notes/
-
-ALLURE_VERSION=5.3.3
+# Migration to version 5 from version 4 is possible from 4.26.5 to 5.3.3
+########################################################################################
+RELEASE_TO_DEPLOY=5.3.3
 
 ########################################################################################
-# ALLURE_ADMIN
-# Super admin login name. This user allows you restoring the access to Allure TestOps
-# This user can access the system and update the licence even if licence ahas expired 
+# Registry Settings
+# Following parameters define the source of TestOps images
+# Default source is to be set accordingly to the documentation of the deployment with docker compose
+# You need to provide the registry url, e.g. docker.io and the repo name, both are described in the docs
 ########################################################################################
-
-ALLURE_ADMIN=admin
+IMAGES_REGISTRY=<correct registry here>
+IMAGES_REPO=<correct repo name accordingly to the docs>
 
 ########################################################################################
-# ALLURE_ADMIN_PASS
-# Super admin's password. Managed only in this file and cannot be updated via UI.
-# Update this before deployment
-########################################################################################
-
-ALLURE_ADMIN_PASS=admin
+# FIRST_ADMIN_EMAIL
+# The email address configured below (FIRST_ADMIN_EMAIL) will be used by the system to send the invitation.
+# to the very first administrator of the instance being deployed.
+# For the operation to be completed successfully all parameters with ALLURE_MAIL_ prefix must be configured for
+# the usage of SMTP server which will send the invitation.
+######################################################################################## 
+FIRST_ADMIN_EMAIL=testops-first-admin@company.test
 
 ########################################################################################
 # ALLURE_HOST
 # You need to update ALLURE_HOST accordingly to your network set up for Allure TestOps
-# ALLURE_HOST must be the FQDN of Allure TestOps instance as it is being accessed by end users and by external systems
+# ALLURE_HOST must be the FQDN of TestOps instance as it is being accessed by end users and by external systems
 # FQDN for end users and external systems must be the same, otherwise collisions will occur
-# If you are using custom port, it's mus be included to the ALLURE_HOST, e.g. ALLURE_HOST=testops.internal.network:10777
+# If you are using custom port, it's must be included to the ALLURE_HOST, e.g. ALLURE_HOST=testops.internal.network:10777
 ########################################################################################
 ALLURE_HOST=allure.io
 
 # ALLURE_INSTANCE_PORT defines the port of testops that is exposed to the external world
 ALLURE_INSTANCE_PORT=80
-# ALLURE_CONTAINER_PORT defines the port of testops which is used to access the appliation inside its container
-# Generlly, you do not need to change it
+# ALLURE_CONTAINER_PORT defines the port of testops which is used to access the application inside its container
+# Generally, you do not need to change it
 ALLURE_CONTAINER_PORT=8080
 
 ########################################################################################
 # ALLURE_PROTO
-# use 'http' if end users and integrations access this insytance using HTTP
-# use 'https' if end users and integrations access this insytance using https
+# use 'http' if end users and integrations access this instance using HTTP
+# use 'https' if end users and integrations access this instance using https
 # if ALLURE_PROTO=https, ALLURE_SECURE_COOKIE must be set to true
 # if ALLURE_PROTO=http and ALLURE_SECURE_COOKIE=true, you won't be able to login
 # ALLURE_SECURE_COOKIE=true is required for the integration with all types of Jira
 ########################################################################################
 ALLURE_PROTO=http
 ALLURE_SECURE_COOKIE=false
-
 
 ########################################################################################
 # Time zone of the instance. 
@@ -82,7 +85,6 @@ ALLURE_JWT_SECRET=123456789ABCDEF
 ########################################################################################
 ALLURE_CRYPTO_PASSWORD=aHR0cHM6Ly9oZWxwLnFhbWV0YS5pbw==
 
-
 ########################################################################################
 # TLS_ parameters are used to add the endpoints with self-signed certificates to trusted ones
 # Comment both if no self signed certificates used
@@ -93,36 +95,19 @@ ALLURE_CRYPTO_PASSWORD=aHR0cHM6Ly9oZWxwLnFhbWV0YS5pbw==
 ## TLS_DB_ENDPOINTS=db.example.com:5432
 
 ########################################################################################
-# Registry Settings
-# Following parameters define the source of Allure TestOps images
-# Default source is to be set accordingly to te documentation of the deployment with docker compose
-
-########################################################################################
-
-ALLURE_REGISTRY=<correct registry here>
-ALLURE_SLUG=<correct slug accordingly to the docs>
-
-
-########################################################################################
 # Defines configuration for Redis
 # Alterations of these parameters make sense only for the production deployment.
 ########################################################################################
-
 ALLURE_REDIS_HOST=redis
 ALLURE_REDIS_PORT=6379
 ALLURE_REDIS_PASS=Y5ZBqrcb68WKA9ZZ
 ALLURE_REDIS_DB=0
 
 ########################################################################################
-# System managed end users registration settings
-# ROLE_GUEST is recommended for better licence consumption control
-########################################################################################
-ALLURE_REGISTRATION_DEFAULT_ROLE=ROLE_GUEST
-
-########################################################################################
-# Integration with SMTP server is required for inviting new local users to Allure TestOps,
+# Integration with SMTP server is required for inviting new local users to TestOps
+# and inviting of the very first administrator of the system being deployed
 # and for the password reset for local users.
-# Local use is an Allure TestOps user that is being authenticated by Allure TestOps withouit any external IAM systems.
+# Local user is an user that is being authenticated by TestOps without any external IAM systems.
 ########################################################################################
 ALLURE_MAIL_HOST=smtp.gmail.com
 ALLURE_MAIL_PORT=465
@@ -150,10 +135,10 @@ ALLURE_LOGIN_PRIMARY=ldap
 LDAP_URL="ldaps://ldaps.space:636"
 LDAP_LOGIN_SA="cn=admin,dc=space"
 LDAP_LOGIN_SA_PASS=SeriviceAccountPassword_Here
+
 ########################################################################################
 # paramerters define the base for searching people in the directory
 ########################################################################################
-
 LDAP_USER_SEARCH_BASE="ou=People,dc=space"
 LDAP_USER_SEARCH_FILTER="uid={0}"
 LDAP_UID_ATTRIBUTE=uid
@@ -180,7 +165,7 @@ LDAP_MAPPING_ROLE_ADMINS=atoadmins,every_user_is_admin
 # You don't need to update this section for the demo config
 # Alterations of these parameters make sense only for the production deployment.
 ########################################################################################
-ALLURE_REPORT_SERVICE_NAME=allure-report-service
+ALLURE_REPORT_SERVICE_NAME=testops-service
 ALLURE_REPORT_CONTEXT_PATH=/rs
 ALLURE_REPORT_DB_HOST=testops-db
 ALLURE_REPORT_DB_NAME=testops
@@ -217,7 +202,6 @@ ALLURE_S3_REGION=qameta-0
 ALLURE_S3_ACCESS_KEY=WBuetMuTAMAB4M78NG3gQ4dCFJr3SSmU
 ALLURE_S3_SECRET_KEY=m9F4qupW4ucKBDQBWr4rwQLSAeC6FE2L
 ALLURE_S3_PATHSTYLE=true
-
 
 ########################################################################################
 # parameters for the fine tuning
