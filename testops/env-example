@@ -6,6 +6,7 @@
 
 # Update this to install different release – check the release notes
 # Release notes: https://docs.qameta.io/allure-testops/release-notes/
+# Migration to version 5 from version 4 is possible from 4.26.5 to 5.3.3
 
 ALLURE_VERSION=5.3.3
 
