@@ -8,7 +8,7 @@
 # Release notes: https://docs.qameta.io/allure-testops/release-notes/
 # Migration to version 5 from version 4 is possible from 4.26.5 to 5.3.3
 
-ALLURE_VERSION=5.3.3
+RELEASE_TO_DEPLOY=5.3.3
 
 ########################################################################################
 # FIRST_ADMIN_EMAIL
