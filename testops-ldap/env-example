@@ -46,8 +46,8 @@ ALLURE_CONTAINER_PORT=8080
 
 ########################################################################################
 # ALLURE_PROTO
-# use 'http' if end users and integrations access this insytance using HTTP
-# use 'https' if end users and integrations access this insytance using https
+# use 'http' if end users and integrations access this instance using HTTP
+# use 'https' if end users and integrations access this instance using https
 # if ALLURE_PROTO=https, ALLURE_SECURE_COOKIE must be set to true
 # if ALLURE_PROTO=http and ALLURE_SECURE_COOKIE=true, you won't be able to login
 # ALLURE_SECURE_COOKIE=true is required for the integration with all types of Jira
