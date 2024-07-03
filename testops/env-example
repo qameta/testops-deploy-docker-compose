@@ -11,6 +11,17 @@
 RELEASE_TO_DEPLOY=5.3.3
 
 ########################################################################################
+# Registry Settings
+# Following parameters define the source of Allure TestOps images
+# Default source is to be set accordingly to te documentation of the deployment with docker compose
+########################################################################################
+
+IMAGE_REGISTRY=<correct registry here>
+ALLURE_SLUG=<correct slug accordingly to the docs>
+
+
+
+########################################################################################
 # FIRST_ADMIN_EMAIL
 # The email address configured below (FIRST_ADMIN_EMAIL) will be used by the system to send the invitation.
 # to the very first administrator of the instance being deployed.
@@ -77,7 +88,6 @@ ALLURE_JWT_SECRET=123456789ABCDEF
 ########################################################################################
 ALLURE_CRYPTO_PASSWORD=aHR0cHM6Ly9oZWxwLnFhbWV0YS5pbw==
 
-
 ########################################################################################
 # TLS_ parameters are used to add the endpoints with self-signed certificates to trusted ones
 # Comment both if no self signed certificates used
@@ -86,16 +96,6 @@ ALLURE_CRYPTO_PASSWORD=aHR0cHM6Ly9oZWxwLnFhbWV0YS5pbw==
 ########################################################################################
 ## TLS_ENDPOINTS=ldaps.example.com:636,rabbit.example.com:5672
 ## TLS_DB_ENDPOINTS=db.example.com:5432
-
-########################################################################################
-# Registry Settings
-# Following parameters define the source of Allure TestOps images
-# Default source is to be set accordingly to te documentation of the deployment with docker compose
-
-########################################################################################
-
-ALLURE_REGISTRY=<correct registry here>
-ALLURE_SLUG=<correct slug accordingly to the docs>
 
 ########################################################################################
 # Defines configuration for Redis
