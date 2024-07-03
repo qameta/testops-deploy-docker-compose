@@ -40,7 +40,7 @@ ALLURE_HOST=allure.io
 
 # ALLURE_INSTANCE_PORT defines the port of testops that is exposed to the external world
 ALLURE_INSTANCE_PORT=80
-# ALLURE_CONTAINER_PORT defines the port of testops which is used to access the appliation inside its container
+# ALLURE_CONTAINER_PORT defines the port of testops which is used to access the application inside its container
 # Generally, you do not need to change it
 ALLURE_CONTAINER_PORT=8080
 

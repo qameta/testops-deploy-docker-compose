@@ -11,6 +11,17 @@
 RELEASE_TO_DEPLOY=5.3.3
 
 ########################################################################################
+# Registry Settings
+# Following parameters define the source of TestOps images
+# Default source is to be set accordingly to the documentation of the deployment with docker compose
+# You need to provide the registry url, e.g. docker.io and the repo name, both are described in the docs.
+########################################################################################
+
+IMAGES_REGISTRY=<correct registry here>
+IMAGES_REPO=<correct repo name accordingly to the docs>
+
+
+########################################################################################
 # FIRST_ADMIN_EMAIL
 # The email address configured below (FIRST_ADMIN_EMAIL) will be used by the system to send the invitation.
 # to the very first administrator of the instance being deployed.
@@ -24,13 +35,13 @@ RELEASE_TO_DEPLOY=5.3.3
 # You need to update ALLURE_HOST accordingly to your network set up for Allure TestOps
 # ALLURE_HOST must be the FQDN of Allure TestOps instance as it is being accessed by end users and by external systems
 # FQDN for end users and external systems must be the same, otherwise collisions will occur
-# If you are using custom port, it's mus be included to the ALLURE_HOST, e.g. ALLURE_HOST=testops.internal.network:10777
+# If you are using custom port, it's must be included to the ALLURE_HOST, e.g. ALLURE_HOST=testops.internal.network:10777
 ########################################################################################
 ALLURE_HOST=allure.io
 
 # ALLURE_INSTANCE_PORT defines the port of testops that is exposed to the external world
 ALLURE_INSTANCE_PORT=80
-# ALLURE_CONTAINER_PORT defines the port of testops which is used to access the appliation inside its container
+# ALLURE_CONTAINER_PORT defines the port of testops which is used to access the application inside its container
 # Generally, you do not need to change it
 ALLURE_CONTAINER_PORT=8080
 
@@ -83,16 +94,6 @@ ALLURE_CRYPTO_PASSWORD=aHR0cHM6Ly9oZWxwLnFhbWV0YS5pbw==
 ########################################################################################
 ## TLS_ENDPOINTS=ldaps.example.com:636,rabbit.example.com:5672
 ## TLS_DB_ENDPOINTS=db.example.com:5432
-
-########################################################################################
-# Registry Settings
-# Following parameters define the source of Allure TestOps images
-# Default source is to be set accordingly to te documentation of the deployment with docker compose
-
-########################################################################################
-
-IMAGES_REGISTRY=<correct registry here>
-IMAGES_REPO=<correct repo name accordingly to the docs>
 
 ########################################################################################
 # Defines configuration for Redis
