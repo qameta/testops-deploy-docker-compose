@@ -10,10 +10,10 @@
 ALLURE_VERSION=5.3.3
 
 ########################################################################################
- # ALLURE_MAIL_ROOT
+ # FIRST_ADMIN_EMAIL
  # Email to send root invitation
  ########################################################################################
- ALLURE_MAIL_ROOT=admin@company.test
+ FIRST_ADMIN_EMAIL=admin@company.test
 
 ########################################################################################
 # ALLURE_HOST
