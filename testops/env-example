@@ -10,10 +10,12 @@
 ALLURE_VERSION=5.3.3
 
 ########################################################################################
- # FIRST_ADMIN_EMAIL
- # Email to send root invitation
+# FIRST_ADMIN_EMAIL
+# The email address configured below (FIRST_ADMIN_EMAIL) will be used by the system to send the invitation 
+# to the very first administrator of the instance being deployed.
+# For the operation to be completed successfully 
 ########################################################################################
-FIRST_ADMIN_EMAIL=admin@company.test
+FIRST_ADMIN_EMAIL=testops-first-admin@company.test
 
 ########################################################################################
 # ALLURE_HOST
