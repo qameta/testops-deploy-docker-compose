@@ -10,20 +10,10 @@
 ALLURE_VERSION=5.3.3
 
 ########################################################################################
-# ALLURE_ADMIN
-# Super admin login name. This user allows you restoring the access to Allure TestOps
-# This user can access the system and update the licence even if licence ahas expired 
-########################################################################################
-
-ALLURE_ADMIN=admin
-
-########################################################################################
-# ALLURE_ADMIN_PASS
-# Super admin's password. Managed only in this file and cannot be updated via UI.
-# Update this before deployment
-########################################################################################
-
-ALLURE_ADMIN_PASS=admin
+ # ALLURE_MAIL_ROOT
+ # Email to send root invitation
+ ########################################################################################
+ ALLURE_MAIL_ROOT=admin@company.test
 
 ########################################################################################
 # ALLURE_HOST
