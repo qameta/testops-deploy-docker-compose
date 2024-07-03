@@ -4,11 +4,21 @@
 # Instances deployed using this config as production system WON'T BE SUPPORTED
 ########################################################################################
 
+########################################################################################
 # Update this to install different release – check the release notes
 # Release notes: https://docs.qameta.io/allure-testops/release-notes/
 # Migration to version 5 from version 4 is possible from 4.26.5 to 5.3.3
-
+########################################################################################
 RELEASE_TO_DEPLOY=5.3.3
+
+########################################################################################
+# Registry Settings
+# Following parameters define the source of Allure TestOps images
+# Default source is to be set accordingly to the documentation of the deployment with docker compose
+# You need to provide the registry url, e.g. docker.io and the repo name, both are described in the docs
+########################################################################################
+IMAGES_REGISTRY=<correct registry here>
+IMAGES_REPO=<correct repo name accordingly to the docs>
 
 ########################################################################################
 # FIRST_ADMIN_EMAIL
@@ -76,7 +86,6 @@ ALLURE_JWT_SECRET=123456789ABCDEF
 ########################################################################################
 ALLURE_CRYPTO_PASSWORD=aHR0cHM6Ly9oZWxwLnFhbWV0YS5pbw==
 
-
 ########################################################################################
 # TLS_ parameters are used to add the endpoints with self-signed certificates to trusted ones
 # Comment both if no self signed certificates used
@@ -85,17 +94,6 @@ ALLURE_CRYPTO_PASSWORD=aHR0cHM6Ly9oZWxwLnFhbWV0YS5pbw==
 ########################################################################################
 ## TLS_ENDPOINTS=ldaps.example.com:636,rabbit.example.com:5672
 ## TLS_DB_ENDPOINTS=db.example.com:5432
-
-########################################################################################
-# Registry Settings
-# Following parameters define the source of Allure TestOps images
-# Default source is to be set accordingly to te documentation of the deployment with docker compose
-
-########################################################################################
-
-IMAGE_REGISTRY=<correct registry here>
-IMAGES_REPO=<correct repo name accordingly to the docs>
-
 
 ########################################################################################
 # Defines configuration for Redis
@@ -211,7 +209,6 @@ ALLURE_S3_REGION=qameta-0
 ALLURE_S3_ACCESS_KEY=WBuetMuTAMAB4M78NG3gQ4dCFJr3SSmU
 ALLURE_S3_SECRET_KEY=m9F4qupW4ucKBDQBWr4rwQLSAeC6FE2L
 ALLURE_S3_PATHSTYLE=true
-
 
 ########################################################################################
 # parameters for the fine tuning

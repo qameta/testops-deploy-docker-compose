@@ -4,7 +4,7 @@ services:
 
   testops:
     restart: always
-    image: ${IMAGE_REGISTRY}/${IMAGES_REPO}/testops:${RELEASE_TO_DEPLOY}
+    image: ${IMAGES_REGISTRY}/${IMAGES_REPO}/testops:${RELEASE_TO_DEPLOY}
     container_name: testops
     networks:
       - testops-net

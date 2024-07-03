@@ -14,9 +14,10 @@ RELEASE_TO_DEPLOY=5.3.3
 # Registry Settings
 # Following parameters define the source of Allure TestOps images
 # Default source is to be set accordingly to te documentation of the deployment with docker compose
+# You need to provide the registry url, e.g. docker.io and the repo name, both are described in the docs
 ########################################################################################
 
-IMAGE_REGISTRY=<correct registry here>
+IMAGES_REGISTRY=<correct registry here>
 IMAGES_REPO=<correct repo name accordingly to the docs>
 
 ########################################################################################
