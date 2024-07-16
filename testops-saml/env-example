@@ -1,7 +1,5 @@
 ########################################################################################
-# This configuration MUST NOT BE USED FOR THE PRODUCTION deployment
-# This configuration CAN BE USED FOR DEMO OR POC PURPOSE 
-# Instances deployed using this config as production system WON'T BE SUPPORTED
+# This configuration CAN BE USED FOR THE PRODUCTION deployment with SAML2 authentication
 ########################################################################################
 
 # Update this to install different release – check the release notes
@@ -36,7 +34,7 @@ FIRST_ADMIN_EMAIL=testops-first-admin@company.test
 # FQDN for end users and external systems must be the same, otherwise collisions will occur
 # If you are using custom port, it's must be included to the TESTOPS_INSTANCE_URL, e.g. TESTOPS_INSTANCE_URL=testops.internal.network:10777
 ########################################################################################
-TESTOPS_HOST=testops.io
+TESTOPS_INSTANCE_URL=testops.io
 
 # TESTOPS_INSTANCE_PORT defines the port of testops that is exposed to the external world
 TESTOPS_INSTANCE_PORT=80
