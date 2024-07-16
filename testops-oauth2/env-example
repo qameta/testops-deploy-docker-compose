@@ -126,7 +126,7 @@ ALLURE_MAIL_SMTP_SSL_TRUST=smtp.gmail.com
 
 ########################################################################################
 # ALLURE_LOGIN_PRIMARY defines default way to authenticate users 
-# ALLURE_LOGIN_PRIMARY options [system|ldap|saml]
+# ALLURE_LOGIN_PRIMARY options [system|ldap|saml|openid]
 ########################################################################################
 # Openid settings
 ########################################################################################
@@ -149,6 +149,7 @@ ALLURE_LOGIN_OPENID_SYNCROLES: false
 ALLURE_LOGIN_OPENID_GROUPROLEATTRIBUTE=groupRoleAttribute
 ALLURE_LOGIN_OPENID_GROUPAUTHORITIES_ROLEUSERGROUPS=roleUserGroups
 ALLURE_LOGIN_OPENID_GROUPAUTHORITIES_ROLEADMINGROUPS=roleAdminGroups
+ALLURE_LOGIN_OPENID_DEFAULTROLE=ROLE_GUEST
 
 ########################################################################################
 # Settings for testops service
