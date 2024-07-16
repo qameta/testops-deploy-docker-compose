@@ -1,13 +1,13 @@
 ########################################################################################
 # This configuration MUST NOT BE USED FOR THE PRODUCTION deployment
-# This configuration CAN BE USED FOR DEMO OR POC PURPOSE 
+# This configuration CAN BE USED FOR DEMO OR POC PURPOSES ONLY 
 # Instances deployed using this config as production system WON'T BE SUPPORTED
 ########################################################################################
 
 # Update this to install different release – check the release notes
 # Release notes: https://docs.qameta.io/allure-testops/release-notes/
 # Migration to version 5 from version 4 is possible from 4.26.5 to 5.3.3
-RELEASE_TO_DEPLOY=5.3.3
+RELEASE_TO_DEPLOY=5.6.0
 
 ########################################################################################
 # Registry Settings
