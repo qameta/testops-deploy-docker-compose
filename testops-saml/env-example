@@ -175,7 +175,6 @@ TESTOPS_TASKEXECUTOR_COREPOOLSIZE=200
 ########################################################################################
 # SAML settings
 ########################################################################################
-LOGIN_PRIMARY=saml
 LOGIN_SAML2_ENABLED=true
 ########################################################################################
 # Defines the default role for a user registered in the system via SAML2 auth
