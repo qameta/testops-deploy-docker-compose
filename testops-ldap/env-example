@@ -121,12 +121,6 @@ ALLURE_MAIL_SMTP_SSL_ENABLE=true
 ALLURE_MAIL_SMTP_SSL_TRUST=smtp.gmail.com
 
 ########################################################################################
-# ALLURE_LOGIN_PRIMARY defines default way to authenticate users 
-# ALLURE_LOGIN_PRIMARY options [system|ldap|saml]
-########################################################################################
-ALLURE_LOGIN_PRIMARY=ldap
-
-########################################################################################
 # LDAP settings
 ########################################################################################
 # LDAP_LOGIN_SA is the service account for access to LDAP search
