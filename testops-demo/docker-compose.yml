@@ -9,7 +9,7 @@ services:
     networks:
       - testops-net
     ports:
-      - "${DEMO_INSTANCE_INSTANCE_PORT}:${DEMO_INSTANCE_CONTAINER_PORT}"
+      - "${DEMO_INSTANCE_PORT}:${DEMO_INSTANCE_CONTAINER_PORT}"
     healthcheck:
       test: "curl -f http://localhost:${DEMO_INSTANCE_CONTAINER_PORT}/api/management/health || exit 1"
       interval: 30s
@@ -17,7 +17,8 @@ services:
       retries: 10
       start_period: 20s
     environment:
-      TLS_ENDPOINTS: ${TLS_ENDPOINTS}
+      # Not required for DEMO installation
+      # TLS_ENDPOINTS: ${TLS_ENDPOINTS}
       SPRING_PROFILES_ACTIVE: compose
       SPRING_CLOUD_CONSUL_ENABLED: "false"
       SPRING_OUTPUT_ANSI_ENABLED: never
@@ -53,8 +54,8 @@ services:
       SPRING_MAIL_PROPERTIES_MAIL_SMTP_SSL_ENABLE: ${SMTP_SSL_ENABLE}
       SPRING_MAIL_PROPERTIES_MAIL_SMTP_SSL_TRUST: ${SMTP_SSL_TRUST}
       ALLURE_MAIL_FROM: ${SMTP_MAIL_FROM}
-
-      TLS_DB_ENDPOINTS: ${TLS_DB_ENDPOINTS}
+      # Not required for DEMO installation
+      # TLS_DB_ENDPOINTS: ${TLS_DB_ENDPOINTS}
       SPRING_DATASOURCE_URL: jdbc:postgresql://${DEMO_INSTANCE_REPORT_DB_HOST}:${DEMO_INSTANCE_REPORT_DB_PORT}/${DEMO_INSTANCE_REPORT_DB_NAME}?assumeMinServerVersion=11&ApplicationName=${DEMO_INSTANCE_REPORT_SERVICE_NAME}
       SPRING_DATASOURCE_USERNAME: ${DEMO_INSTANCE_REPORT_DB_USERNAME}
       SPRING_DATASOURCE_PASSWORD: ${DEMO_INSTANCE_REPORT_DB_PASS}
