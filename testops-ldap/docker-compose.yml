@@ -41,7 +41,7 @@ services:
       SPRING_DATA_REDIS_PASSWORD: ${ALLURE_REDIS_PASS}
       SPRING_DATA_REDIS_DATABASE: ${ALLURE_REDIS_DB}
       
-      # SPRING_MAIL_ are mandatory if you are using system acounts
+      # SPRING_MAIL_ are mandatory for all types of authentication
       SPRING_MAIL_HOST: ${ALLURE_MAIL_HOST}
       SPRING_MAIL_PORT: ${ALLURE_MAIL_PORT}
       SPRING_MAIL_USERNAME: ${ALLURE_MAIL_USERNAME}

@@ -22,7 +22,7 @@ IMAGES_REPO=<correct repo name accordingly to the docs>
 # FIRST_ADMIN_EMAIL
 # The email address configured below (FIRST_ADMIN_EMAIL) will be used by the system to send the invitation.
 # to the very first administrator of the instance being deployed.
-# For the operation to be completed successfully all parameters with ALLURE_MAIL_ prefix must be configured for
+# For the operation to be completed successfully all parameters with SMTP_ prefix must be configured for
 # the usage of SMTP server which will send the invitation.
 ########################################################################################
 FIRST_ADMIN_EMAIL=testops-first-admin@company.test
@@ -191,7 +191,9 @@ SMTP_SSL_TRUST=smtp.gmail.com
 # ALLURE_LOGIN_PRIMARY options are [system|ldap|saml|openid]
 # This very config uses OpenID
 ########################################################################################
+TESTOPS_LOGIN_PRIMARY=openid
 
+########################################################################################
 # Openid settings
 ########################################################################################
 
@@ -200,6 +202,8 @@ ALLURE_LOGIN_PRIMARY=openid
 # Don't use whitespaces and special characters
 # You can use array of different providers using different oauth2:
 # SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_<PROVIDER_NAME>_... + SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_<PROVIDER_NAME>_...
+########################################################################################
+
 SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OPENID_CLIENTNAME: KeyCloak
 SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OPENID_CLIENTID: <YOU_CLIENT_ID>
 SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OPENID_CLIENTSECRET: <YOUR_CLIENT_SECRET?

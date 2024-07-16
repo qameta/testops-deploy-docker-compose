@@ -45,7 +45,7 @@ services:
       SPRING_DATA_REDIS_PASSWORD: ${REDIS_PASS}
       SPRING_DATA_REDIS_DATABASE: ${REDIS_DB}
       
-      # SPRING_MAIL_ are mandatory if you are using system acounts
+      # SPRING_MAIL_ are mandatory for all types of authentication
       SPRING_MAIL_HOST: ${SMTP_HOST}
       SPRING_MAIL_PORT: ${SMTP_PORT}
       SPRING_MAIL_USERNAME: ${SMTP_USERNAME}
