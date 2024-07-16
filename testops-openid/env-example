@@ -187,15 +187,7 @@ SMTP_SSL_ENABLE=true
 SMTP_SSL_TRUST=smtp.gmail.com
 
 ########################################################################################
-# ALLURE_LOGIN_PRIMARY defines default way to authenticate users
-# ALLURE_LOGIN_PRIMARY options are [system|ldap|saml|openid]
-# This very config uses OpenID
-########################################################################################
-TESTOPS_LOGIN_PRIMARY=openid
-
-########################################################################################
-# Openid settings
-########################################################################################
+# OpenId settings
 
 ALLURE_LOGIN_PRIMARY=openid
 # The text ID for the SSO provider. Will be used in URLs and displayed on the login buttons.
@@ -203,19 +195,31 @@ ALLURE_LOGIN_PRIMARY=openid
 # You can use array of different providers using different oauth2:
 # SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_<PROVIDER_NAME>_... + SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_<PROVIDER_NAME>_...
 ########################################################################################
+# TESTOPS_OPENID_CLIENTNAME - the text id of the OpenID client (TestOps is the OpenID client)
+# TESTOPS_OPENID_CLIENTID - The identifier of Allure TestOps as client in OpenID provider
+# TESTOPS_OPENID_CLIENTSECRET - secret generated at OpenID providert to authenticate the client application
+# TESTOPS_OPENID_REDIRECTURI - the URL ro which OpenId provider must redirect successfully authenticated end user
 
-SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OPENID_CLIENTNAME: KeyCloak
-SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OPENID_CLIENTID: <YOU_CLIENT_ID>
-SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OPENID_CLIENTSECRET: <YOUR_CLIENT_SECRET?
-SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OPENID_REDIRECTURI: https://<your-domain>/login/oauth2/code/openid
-SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OPENID_SCOPE: openid,email,profile
-SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OPENID_AUTHORIZATIONGRANTTYPE: authorization_code
-SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OPENID_AUTHORIZATIONURI: http://KeyCloak/realms/<you_realm>/protocol/openid-connect/auth
-SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OPENID_USERINFOURI: http://KeyCloak/realms/<you_realm>/protocol/openid-connect/userinfo
-SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OPENID_ISSUERURI: http://KeyCloak/realms/<you_realm>
-SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OPENID_USERNAMEATTRIBUTE: preferred_username
-ALLURE_LOGIN_OPENID_SYNCROLES: false
-ALLURE_LOGIN_OPENID_GROUPROLEATTRIBUTE=groupRoleAttribute
-ALLURE_LOGIN_OPENID_GROUPAUTHORITIES_ROLEUSERGROUPS=roleUserGroups
-ALLURE_LOGIN_OPENID_GROUPAUTHORITIES_ROLEADMINGROUPS=roleAdminGroups
-ALLURE_LOGIN_OPENID_DEFAULTROLE=ROLE_GUEST
+# TESTOPS_OPENID_AUTHORIZATIONURI - the URI, to which TestOps instance must forward the end user for the authentication
+# TESTOPS_OPENID_USERINFOURI - It is advertised in the server metadata
+# TESTOPS_OPENID_ISSUERURI - It is advertised in the server metadata
+
+TESTOPS_OPENID_CLIENTNAME: TestOps
+TESTOPS_OPENID_CLIENTID: <YOUR_CLIENT_ID>
+TESTOPS_OPENID_CLIENTSECRET: <YOUR_CLIENT_SECRET_ere>
+TESTOPS_OPENID_REDIRECTURI: https://<your-domain>/login/oauth2/code/openid
+TESTOPS_OPENID_SCOPE: openid,email,profile
+TESTOPS_OPENID_AUTHORIZATIONURI: http://<open_id_provider_url>/realms/<you_realm>/protocol/openid-connect/auth
+TESTOPS_OPENID_USERINFOURI: http://<open_id_provider_url>/realms/<you_realm>/protocol/openid-connect/userinfo
+TESTOPS_OPENID_ISSUERURI: http://<open_id_provider_url>/realms/<you_realm>
+TESTOPS_OPENID_USERNAMEATTRIBUTE: preferred_username
+
+TESTOPS_OPENID_DEFAULTROLE=ROLE_GUEST
+# TESTOPS_OPENID_SYNCROLES - Defines whether TestOps should assign global roles based on the OpenID server group membership
+# TESTOPS_OPENID_GROUPROLEATTRIBUTE - defines the name of a claim to look for
+# TESTOPS_OPENID_GROUPAUTHORITIES_ROLEUSERGROUPS - members of these groups will be granted ROLE_USER global role
+# TESTOPS_OPENID_GROUPAUTHORITIES_ROLEADMINGROUPS - members of these groups will be granted ROLE_ADMIN global role
+TESTOPS_OPENID_SYNCROLES: false
+TESTOPS_OPENID_GROUPROLEATTRIBUTE=group
+TESTOPS_OPENID_GROUPAUTHORITIES_ROLEUSERGROUPS=roleUserGroups
+TESTOPS_OPENID_GROUPAUTHORITIES_ROLEADMINGROUPS=roleAdminGroups
