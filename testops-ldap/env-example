@@ -198,15 +198,16 @@ LDAP_LOGIN_SA="cn=admin,dc=space"
 LDAP_LOGIN_SA_PASS=SeriviceAccountPassword_Here
 
 ########################################################################################
-# paramerters define the base for searching people in the directory
+# Default role, can be ROLE_GUEST/ROLE_USER/ROLE_ADMIN
+########################################################################################
+LDAP_DEFAULT_ROLE=ROLE_GUEST
+
+########################################################################################
+# parameters define the base for searching people in the directory
 ########################################################################################
 LDAP_USER_SEARCH_BASE="ou=People,dc=space"
 LDAP_USER_SEARCH_FILTER="uid={0}"
 LDAP_UID_ATTRIBUTE=uid
-########################################################################################
-# Default role, can be ROLE_GUEST/ROLE_USER/ROLE_ADMIN
-########################################################################################
-LDAP_DEFAULT_ROLE=ROLE_GUEST
 
 ########################################################################################
 # parameters define what is the global role will be assigned to the end user that
@@ -220,3 +221,7 @@ LDAP_GROUP_SEARCH_BASE="ou=group,dc=space"
 LDAP_GROUP_SEARCH_FILTER="memberUid={1}"
 LDAP_MAPPING_ROLE_USERS=atousers,every_user_is_user
 LDAP_MAPPING_ROLE_ADMINS=atoadmins,every_user_is_admin
+
+# converts and stores usernames of LDAP users as lower case string
+# i.e. if user enters Name.Surname, the username in TestOps will be stored as name.surname
+LDAP_LOWERCASEUSERNAMES=true
