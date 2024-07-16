@@ -119,32 +119,6 @@ SMTP_SSL_ENABLE=true
 SMTP_SSL_TRUST=smtp.gmail.com
 
 ########################################################################################
-# LOGIN_PRIMARY defines default way to authenticate users 
-# LOGIN_PRIMARY options [system|ldap|saml]
-########################################################################################
-# SAML settings
-########################################################################################
-LOGIN_PRIMARY=saml
-LOGIN_SAML2_ENABLED=true
-########################################################################################
-# Defines the default role for a user registered in the system via SAML2 auth
-########################################################################################
-REGISTRATION_DEFAULT_ROLE=ROLE_GUEST
-# The text ID for the SSO provider. Will be used in URLs and displayed on the login buttons.
-# Don't use whitespaces and special characters
-LOGIN_SAML2_ID=KeyCloak
-LOGIN_SAML2_ACS_URL=https://<your-domain>/api/login/saml2/sso/{registrationId}
-LOGIN_SAML2_ENTITY_ID=https://<testops>/api/login/saml2/authenticate/{registrationId}
-LOGIN_SAML2_METADATA_URL=https:///path/to/metadata.xml
-LOGIN_SAML2_FIRSTNAMEATTRIBUTE=firstNameAttribute
-LOGIN_SAML2_LASTNAMEATTRIBUTE=lastNameAttribute
-LOGIN_SAML2_EMAILATTRIBUTE=emailAttribute
-LOGIN_SAML2_SYNCROLES=false
-LOGIN_SAML2_GROUPROLEATTRIBUTE=groupRoleAttribute
-LOGIN_SAML2_GROUPAUTHORITIES_ROLEUSERGROUPS=roleUserGroups
-LOGIN_SAML2_GROUPAUTHORITIES_ROLEADMINGROUPS=roleAdminGroups
-
-########################################################################################
 # Settings for testops service
 # Alterations of these parameters make sense only for the production deployment.
 ########################################################################################
@@ -195,3 +169,29 @@ TESTOPS_S3_PATHSTYLE=true
 TESTOPS_S3_MAXCONCURRENCY=200
 TESTOPS_SCHEDULER_CLEANER_BLOB_BATCHSIZE=2000
 TESTOPS_TASKEXECUTOR_COREPOOLSIZE=200
+
+########################################################################################
+# LOGIN_PRIMARY defines default way to authenticate users 
+# LOGIN_PRIMARY options [system|ldap|saml]
+########################################################################################
+# SAML settings
+########################################################################################
+LOGIN_PRIMARY=saml
+LOGIN_SAML2_ENABLED=true
+########################################################################################
+# Defines the default role for a user registered in the system via SAML2 auth
+########################################################################################
+REGISTRATION_DEFAULT_ROLE=ROLE_GUEST
+# The text ID for the SSO provider. Will be used in URLs and displayed on the login buttons.
+# Don't use whitespaces and special characters
+LOGIN_SAML2_ID=KeyCloak
+LOGIN_SAML2_ACS_URL=https://<your-domain>/api/login/saml2/sso/{registrationId}
+LOGIN_SAML2_ENTITY_ID=https://<testops>/api/login/saml2/authenticate/{registrationId}
+LOGIN_SAML2_METADATA_URL=https:///path/to/metadata.xml
+LOGIN_SAML2_FIRSTNAMEATTRIBUTE=firstNameAttribute
+LOGIN_SAML2_LASTNAMEATTRIBUTE=lastNameAttribute
+LOGIN_SAML2_EMAILATTRIBUTE=emailAttribute
+LOGIN_SAML2_SYNCROLES=false
+LOGIN_SAML2_GROUPROLEATTRIBUTE=groupRoleAttribute
+LOGIN_SAML2_GROUPAUTHORITIES_ROLEUSERGROUPS=roleUserGroups
+LOGIN_SAML2_GROUPAUTHORITIES_ROLEADMINGROUPS=roleAdminGroups
