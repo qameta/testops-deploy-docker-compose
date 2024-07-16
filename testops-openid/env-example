@@ -1,20 +1,31 @@
 ########################################################################################
-# This configuration MUST NOT BE USED FOR THE PRODUCTION deployment
-# This configuration CAN BE USED FOR DEMO OR POC PURPOSESES 
-# Instances deployed using this config as production system WON'T BE SUPPORTED
+# This configuration CAN BE USED FOR THE PRODUCTION deployment with OpenID authentication
+# OpenID is working only starting from the release 5.6.0
 ########################################################################################
 
 # Update this to install different release – check the release notes
 # Release notes: https://docs.qameta.io/allure-testops/release-notes/
 
-ALLURE_VERSION=5.3.3
-
+RELEASE_TO_DEPLOY=5.6.0
 
 ########################################################################################
- # ALLURE_MAIL_ROOT
- # Email to send root invitation
- ########################################################################################
- ALLURE_MAIL_ROOT=admin@company.test
+# Registry Settings
+# Following parameters define the source of TestOps images
+# Default source is to be set accordingly to the documentation of the deployment with docker compose
+# You need to provide the registry url, e.g. docker.io and the repo name, both are described in the docs.
+########################################################################################
+
+IMAGES_REGISTRY=<correct registry accordingly to the docs>
+IMAGES_REPO=<correct repo name accordingly to the docs>
+
+########################################################################################
+# FIRST_ADMIN_EMAIL
+# The email address configured below (FIRST_ADMIN_EMAIL) will be used by the system to send the invitation.
+# to the very first administrator of the instance being deployed.
+# For the operation to be completed successfully all parameters with ALLURE_MAIL_ prefix must be configured for
+# the usage of SMTP server which will send the invitation.
+########################################################################################
+ FIRST_ADMIN_EMAIL=testops-first-admin@company.test
 
 ########################################################################################
 # ALLURE_HOST
@@ -23,7 +34,7 @@ ALLURE_VERSION=5.3.3
 # FQDN for end users and external systems must be the same, otherwise collisions will occur
 # If you are using custom port, it's mus be included to the ALLURE_HOST, e.g. ALLURE_HOST=testops.internal.network:10777
 ########################################################################################
-ALLURE_HOST=allure.io
+ALLURE_HOST=testops.io
 
 # ALLURE_INSTANCE_PORT defines the port of testops that is exposed to the external world
 ALLURE_INSTANCE_PORT=80

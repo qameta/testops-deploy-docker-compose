@@ -8,7 +8,7 @@
 # Release notes: https://docs.qameta.io/allure-testops/release-notes/
 # Migration to version 5 from version 4 is possible from 4.26.5 to 5.3.3
 
-RELEASE_TO_DEPLOY=5.3.3
+RELEASE_TO_DEPLOY=5.6.0
 
 ########################################################################################
 # Registry Settings
@@ -37,7 +37,7 @@ IMAGES_REPO=<correct repo name accordingly to the docs>
 # FQDN for end users and external systems must be the same, otherwise collisions will occur
 # If you are using custom port, it's must be included to the ALLURE_HOST, e.g. ALLURE_HOST=testops.internal.network:10777
 ########################################################################################
-ALLURE_HOST=allure.io
+ALLURE_HOST=testops.io
 
 # ALLURE_INSTANCE_PORT defines the port of testops that is exposed to the external world
 ALLURE_INSTANCE_PORT=80

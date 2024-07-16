@@ -34,7 +34,7 @@ FIRST_ADMIN_EMAIL=testops-first-admin@company.test
 # FQDN for end users and external systems must be the same, otherwise collisions will occur
 # If you are using custom port, it's mus be included to the ALLURE_HOST, e.g. ALLURE_HOST=testops.internal.network:10777
 ########################################################################################
-ALLURE_HOST=allure.io
+ALLURE_HOST=testops.io
 
 # ALLURE_INSTANCE_PORT defines the port of testops that is exposed to the external world
 ALLURE_INSTANCE_PORT=80
