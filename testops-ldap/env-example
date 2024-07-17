@@ -107,7 +107,7 @@ REDIS_DB=0
 # Local user is an user that is being authenticated by TestOps without any external IAM systems.
 ########################################################################################
 SMTP_HOST=smtp.gmail.com
-SMTP_PORT=465
+SMTP_PORT=587
 SMTP_USERNAME=username
 SMTP_PASSWORD=password
 SMTP_MAIL_FROM=noreply@example.com
@@ -177,7 +177,7 @@ TESTOPS_TASKEXECUTOR_COREPOOLSIZE=200
 # Local user is an user that is being authenticated by TestOps without any external IAM systems.
 ########################################################################################
 SMTP_HOST=smtp.gmail.com
-SMTP_PORT=465
+SMTP_PORT=587
 SMTP_USERNAME=username
 SMTP_PASSWORD=password
 SMTP_MAIL_FROM=noreply@example.com
