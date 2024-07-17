@@ -57,6 +57,20 @@ Use this configuration if you are going to manage end users and their authentica
 | Redis          | preferably standalone server |
 | S3 solution    | standalone server            |
 
+### testops-openid
+
+Use this configuration if you are going to manage end users and their authentication via existing Identity Provider service supporting OpenID authentication.
+
+#### Target deployment architecture
+
+| Component      | Deployed as                  |
+|----------------|------------------------------|
+| Allure TestOps | via docker compose           |
+| Postgres       | standalone server            |
+| RabbitMQ       | preferably standalone server |
+| Redis          | preferably standalone server |
+| S3 solution    | standalone server            |
+
 ## Upgrade from version 4 to version 5
 
 The only available paths from to upgrade 4 to 5  are
