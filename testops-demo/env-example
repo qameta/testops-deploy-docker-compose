@@ -6,7 +6,7 @@
 
 # Update this to install different release – check the release notes
 # Release notes: https://docs.qameta.io/allure-testops/release-notes/
-RELEASE_TO_DEPLOY=5.6.0
+RELEASE_TO_DEPLOY=5.6.1
 
 ########################################################################################
 # Registry Settings
