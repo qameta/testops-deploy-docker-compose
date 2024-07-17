@@ -70,7 +70,7 @@ DEMO_INSTANCE_SESSION_DURATION=57600
 # the longer this string is, the more resources will be required for the keys generation
 # Longer string here will require more CPU for crypto operations
 ########################################################################################
-DEMO_INSTANCE_TESTOPS_JWT_SECRET=123456789ABCDEF
+DEMO_INSTANCE_JWT_SECRET=123456789ABCDEF
 
 ########################################################################################
 # DEMO_INSTANCE_CRYPTO_PASSWORD 
@@ -78,7 +78,7 @@ DEMO_INSTANCE_TESTOPS_JWT_SECRET=123456789ABCDEF
 # Integrations' secreats are encrypted using this password
 # Update this parameter once before the deployment and do not change it. Keep it in a safe place.
 ########################################################################################
-DEMO_INSTANCE_TESTOPS_CRYPTO_PASSWORD=aHR0cHM6Ly9oZWxwLnFhbWV0YS5pbw==
+DEMO_INSTANCE_CRYPTO_PASSWORD=aHR0cHM6Ly9oZWxwLnFhbWV0YS5pbw==
 
 ########################################################################################
 # TLS_ parameters are used to add the endpoints with self-signed certificates to trusted ones
