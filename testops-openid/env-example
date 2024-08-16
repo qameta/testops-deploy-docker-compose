@@ -201,15 +201,21 @@ SMTP_SSL_TRUST=smtp.gmail.com
 # TESTOPS_OPENID_USERINFOURI - It is advertised in the server metadata
 # TESTOPS_OPENID_ISSUERURI - It is advertised in the server metadata
 
-TESTOPS_OPENID_CLIENTNAME=TestOps
+TESTOPS_OPENID_CLIENTNAME=testops
 TESTOPS_OPENID_CLIENTID=<YOUR_CLIENT_ID>
 TESTOPS_OPENID_CLIENTSECRET=<YOUR_CLIENT_SECRET_HERE>
-TESTOPS_OPENID_REDIRECTURI=https://<your-domain>/login/oauth2/code/openid
+TESTOPS_OPENID_REDIRECTURI=http://<your-testops-domain>/login/oauth2/code/openid
 TESTOPS_OPENID_SCOPE=openid,email,profile
-TESTOPS_OPENID_AUTHORIZATIONURI=http://<open_id_provider_url>/realms/<you_realm>/protocol/openid-connect/auth
-TESTOPS_OPENID_USERINFOURI=http://<open_id_provider_url>/realms/<you_realm>/protocol/openid-connect/userinfo
-TESTOPS_OPENID_ISSUERURI=http://<open_id_provider_url>/realms/<you_realm>
 TESTOPS_OPENID_USERNAMEATTRIBUTE=preferred_username
+TESTOPS_OPENID_AUTHORIZATIONGRANTTYPE=authorization_code
+TESTOPS_OPENID_AUTHORIZATIONURI=http://<open_id_provider_url>/somepath/openid-connect/auth
+TESTOPS_OPENID_JWKSETURI=http://<open_id_provider_url>/somepath/keys
+TESTOPS_OPENID_JWKSETURI=http://<open_id_provider_url>/somepath/token
+
+# optional parameters commented in docker-compose.yml
+# uncomment these in docker-compose.yml if you know what you are doing and really need using these for the integration with IdP
+# TESTOPS_OPENID_ISSUERURI=http://<open_id_provider_url>/realms/<you_realm>
+# TESTOPS_OPENID_USERINFOURI=http://<open_id_provider_url>/realms/<you_realm>/protocol/openid-connect/userinfo
 
 TESTOPS_OPENID_DEFAULTROLE=ROLE_GUEST
 # TESTOPS_OPENID_SYNCROLES - Defines whether TestOps should assign global roles based on the OpenID server group membership
