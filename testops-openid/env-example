@@ -217,6 +217,10 @@ TESTOPS_OPENID_JWKSETURI=http://<open_id_provider_url>/somepath/token
 # TESTOPS_OPENID_ISSUERURI=http://<open_id_provider_url>/realms/<you_realm>
 # TESTOPS_OPENID_USERINFOURI=http://<open_id_provider_url>/realms/<you_realm>/protocol/openid-connect/userinfo
 
+# name of the parameter (claim) defining the name of the end user being authenticated
+TESTOPS_OPENID_FIRSTNAMEATTRIBUTE: first_name
+TESTOPS_OPENID_LASTAMEATTRIBUTE: last_name
+
 TESTOPS_OPENID_DEFAULTROLE=ROLE_GUEST
 # TESTOPS_OPENID_SYNCROLES - Defines whether TestOps should assign global roles based on the OpenID server group membership
 # TESTOPS_OPENID_GROUPROLEATTRIBUTE - defines the name of a claim to look for
