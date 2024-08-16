@@ -210,7 +210,7 @@ TESTOPS_OPENID_USERNAMEATTRIBUTE=preferred_username
 TESTOPS_OPENID_AUTHORIZATIONGRANTTYPE=authorization_code
 TESTOPS_OPENID_AUTHORIZATIONURI=http://<open_id_provider_url>/somepath/openid-connect/auth
 TESTOPS_OPENID_JWKSETURI=http://<open_id_provider_url>/somepath/keys
-TESTOPS_OPENID_JWKSETURI=http://<open_id_provider_url>/somepath/token
+TESTOPS_OPENID_TOKENURI=http://<open_id_provider_url>/somepath/token
 
 # optional parameters commented in docker-compose.yml
 # uncomment these in docker-compose.yml if you know what you are doing and really need using these for the integration with IdP
