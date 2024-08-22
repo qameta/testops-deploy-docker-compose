@@ -208,3 +208,12 @@ LDAP_MAPPING_ROLE_ADMINS=atoadmins,every_user_is_admin
 # converts and stores usernames of LDAP users as lower case string
 # i.e. if user enters Name.Surname, the username in TestOps will be stored as name.surname
 LDAP_LOWERCASEUSERNAMES=true
+
+
+########################################################################################
+# INACTIVE_USER_SESSION_EXPIRATION defined the period of time after that the user session 
+# will be invalidated and user will be asked to login again
+# for the value below (10d) if an end user logs in to the instance, then logs out and logs in again in 11 days
+# they will be asked to enter the credentials again
+########################################################################################
+INACTIVE_USER_SESSION_EXPIRATION=10d
