@@ -170,4 +170,4 @@ DEMO_INSTANCE_TASKEXECUTOR_COREPOOLSIZE=200
 # for the value below (10d) if an end user logs in to the instance, then logs out and logs in again in 11 days
 # they will be asked to enter the credentials again
 ########################################################################################
-INACTIVE_USER_SESSION_EXPIRATION=10d
+DEMO_INSTANCE_INACTIVE_USER_SESSION_EXPIRATION=10d
