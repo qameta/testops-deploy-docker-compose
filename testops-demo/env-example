@@ -163,3 +163,11 @@ DEMO_INSTANCE_S3_PATHSTYLE=true
 DEMO_INSTANCE_S3_MAXCONCURRENCY=200
 DEMO_INSTANCE_SCHEDULER_CLEANER_BLOB_BATCHSIZE=1000
 DEMO_INSTANCE_TASKEXECUTOR_COREPOOLSIZE=200
+
+########################################################################################
+# INACTIVE_USER_SESSION_EXPIRATION defined the period of time after that the user session 
+# will be invalidated and user will be asked to login again
+# for the value below (10d) if an end user logs in to the instance, then logs out and logs in again in 11 days
+# they will be asked to enter the credentials again
+########################################################################################
+INACTIVE_USER_SESSION_EXPIRATION=10d
