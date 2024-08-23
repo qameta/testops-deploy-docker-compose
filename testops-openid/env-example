@@ -231,3 +231,11 @@ TESTOPS_OPENID_SYNCROLES=false
 TESTOPS_OPENID_GROUPROLEATTRIBUTE=group
 TESTOPS_OPENID_GROUPAUTHORITIES_ROLEUSERGROUPS=roleUserGroups
 TESTOPS_OPENID_GROUPAUTHORITIES_ROLEADMINGROUPS=roleAdminGroups
+
+########################################################################################
+# INACTIVE_USER_SESSION_EXPIRATION defined the period of time after that the user session 
+# will be invalidated and user will be asked to login again
+# for the value below (10d) if an end user logs in to the instance, then logs out and logs in again in 11 days
+# they will be asked to enter the credentials again
+########################################################################################
+INACTIVE_USER_SESSION_EXPIRATION=10d
