@@ -1,3 +1,6 @@
+2024-09-23 this repository is outdated and is no longer maintained
+We've moved the development of the Helm chart to a private VCS and repo. Please refer to the documentation pages for correct links and instructions.
+
 # Allure TestOps version 5, configuration files for docker compose installation
 
 ## Configuration sets
