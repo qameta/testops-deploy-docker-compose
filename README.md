@@ -81,7 +81,6 @@ Use this configuration if you are going to manage end users and their authentica
 
 The only available paths from to upgrade 4 to 5  are
 
-- 4.25.1 → 5.3.3
-- 4.26.1 → 5.3.3
+- 4.26.5 → 5.3.3 and next releases
 
 Upgrade process is thoroughly described in [Allure TestOps documentation here.](https://)
